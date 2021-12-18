@@ -15,8 +15,7 @@ function App() {
   const currentCountry = countries.slice(firstPage, lastPage);
   const countPage = Math.ceil(countries.length / perPage);
 
-  console.log("++++", countPage);
-
+ 
   useEffect(() => {
     axios.get('https://restcountries.com/v3.1/all').then((res) => setCountries(res.data));
   }, []);
